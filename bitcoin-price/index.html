@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Bitcoin Current Price is: <span id="price"></span> <span id="currency">USD</span></h1>
+    <p>Updated <span id="updated"></span></p>
+    <div>
+        <div>
+            <input type="radio" id="USD" value="USD" name="currency" onclick="changeCurrency(this.value)" checked>
+            <label for="USD">USD</label>
+        </div>
+        <div>
+            <input type="radio" id="GBP" value="GBP" name="currency" onclick="changeCurrency(this.value)">
+            <label for="GBP">GBP</label>
+        </div>
+        <div>
+            <input type="radio" id="EUR" value="EUR" name="currency" onclick="changeCurrency(this.value)">
+            <label for="EUR">EUR</label>
+        </div>
+    </div>
+    <br>
+    <button onclick="refreshData()">Refresh Data</button>
+    
+    <script src='bitcoin-price.js' type="text/javascript"></script>
+</body>
+</html>
