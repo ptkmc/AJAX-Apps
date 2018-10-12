@@ -1,4 +1,4 @@
-const url = 'https://ron-swanson-quotes.herokuapp.com/v2/quotesxx';
+const url = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes';
 const quote = document.querySelector('#quote');
 
 document.querySelector('#xhr').addEventListener('click', retrieveWithXHR);
