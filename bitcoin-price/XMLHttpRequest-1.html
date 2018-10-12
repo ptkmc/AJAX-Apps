@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="zen"></h1>
+    
+    <script>
+        const XHR = new XMLHttpRequest();
+        const zen = document.querySelector('#zen');
+
+        XHR.onreadystatechange = function() {
+            console.log('READY STATE IS...', XHR.readyState);
+            if(XHR.readyState == 4){
+                if(XHR.status == 200) {
+                    zen.innerText = XHR.responseText;
+                } else {
+                    console.log('There was a problem');
+                }
+            }
+        }
+        XHR.open('GET', 'https://api.github.com/zen');
+        XHR.send();
+    </script>
+</body>
+</html>
